@@ -1,0 +1,925 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* =========================================================
+   LV MAISON — REGISTER
+   CLEAN • ELEGANT • LUXURY • RESPONSIVE
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --black: #101010;
+    --black-soft: #1c1c1c;
+
+    --ivory: #f7f5ef;
+    --white: #ffffff;
+
+    --gold: #ad9158;
+    --gold-light: #d6bd86;
+    --gold-dark: #8f743f;
+
+    --text: #171717;
+    --muted: #77736b;
+
+    --border: #dedad1;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--ivory);
+    color: var(--text);
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.register-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+/* =========================================================
+   LEFT SIDE — HERO / TAS
+========================================================= */
+
+.register-visual {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: #151515;
+
+    background-image: url("images/hero.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.register-visual .overlay {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.28);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   EXTRA DARK GRADIENT
+========================================================= */
+
+.register-visual::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.08),
+            rgba(0, 0, 0, 0.30)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LUXURY BORDER
+========================================================= */
+
+.register-visual .luxury-border {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+
+    z-index: 5;
+
+    border: 1px solid rgba(214, 189, 134, 0.65);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LEFT BRAND CONTENT
+========================================================= */
+
+.brand-content {
+    position: relative;
+
+    z-index: 10;
+
+    width: 82%;
+    max-width: 620px;
+
+    text-align: center;
+
+    color: var(--white);
+
+    /* NAIKKAN TULISAN */
+    transform: translateY(-70px);
+}
+
+
+/* =========================================================
+   WELCOME TO
+========================================================= */
+
+.brand-content .small-title {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 6px;
+
+    color: var(--gold-light);
+}
+
+
+/* =========================================================
+   LV MAISON
+========================================================= */
+
+.brand-content h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(52px, 5vw, 78px);
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 3px 20px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.brand-content .line {
+    display: block;
+
+    width: 65px;
+    height: 1px;
+
+    margin: 24px auto;
+
+    background: var(--gold-light);
+}
+
+
+/* =========================================================
+   LEFT DESCRIPTION
+========================================================= */
+
+.brand-content p {
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    font-size: 13px;
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.register-heading {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    background: var(--ivory);
+
+    /*
+       FORM DINAikkan.
+       Semakin kecil angka pertama,
+       semakin dekat ke atas.
+    */
+    padding: 42px clamp(35px, 6vw, 90px) 40px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.register-intro {
+    width: 100%;
+    max-width: 580px;
+
+    margin: 0 auto 21px;
+}
+
+
+/* =========================================================
+   CREATE YOUR ACCOUNT
+========================================================= */
+
+.register-intro .small-title {
+    display: block;
+
+    margin-bottom: 11px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 3.5px;
+
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   JOIN LV MAISON
+========================================================= */
+
+.register-intro h2 {
+    margin-bottom: 9px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(38px, 3.5vw, 53px);
+
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+    color: var(--black);
+}
+
+
+/* =========================================================
+   INTRO DESCRIPTION
+========================================================= */
+
+.register-intro p {
+    max-width: 500px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.register-form {
+    width: 100%;
+    max-width: 580px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.register-form .form-group {
+    width: 100%;
+
+    margin-bottom: 11px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.register-form .form-group label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.register-form .input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.register-form .input-wrapper > i {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 3;
+
+    font-size: 13px;
+
+    color: var(--gold-dark);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.register-form .input-wrapper input {
+    display: block;
+
+    width: 100%;
+    height: 48px;
+
+    padding: 0 48px;
+
+    border: 1px solid var(--border);
+    border-radius: 0;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.62);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 12px;
+
+    color: var(--text);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.register-form .input-wrapper input::placeholder {
+    color: #aaa69e;
+}
+
+
+/* INPUT FOCUS */
+
+.register-form .input-wrapper input:focus {
+    border-color: var(--gold);
+
+    background: var(--white);
+
+    box-shadow:
+        0 0 0 3px rgba(173, 145, 88, 0.08);
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.register-form .password-toggle {
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #96928b;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: color 0.2s ease;
+}
+
+
+.register-form .password-toggle:hover {
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.register-form .terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin: 5px 0 15px;
+}
+
+
+/* CHECKBOX */
+
+.register-form .terms input {
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    accent-color: var(--gold);
+
+    cursor: pointer;
+}
+
+
+/* TERMS TEXT */
+
+.register-form .terms label {
+    margin: 0;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    color: var(--muted);
+}
+
+
+/* TERMS LINKS */
+
+.register-form .terms a {
+    color: var(--gold-dark);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.register-form .terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT BUTTON
+========================================================= */
+
+.register-form .register-button {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+    border-radius: 0;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.register-form .register-button:hover {
+    background: var(--black-soft);
+
+    transform: translateY(-1px);
+}
+
+
+/* ARROW */
+
+.register-form .register-button .arrow {
+    font-size: 18px;
+
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.register-form .divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin: 14px 0;
+}
+
+
+.register-form .divider::before,
+.register-form .divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border);
+}
+
+
+.register-form .divider span {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #aaa59c;
+}
+
+
+/* =========================================================
+   GOOGLE BUTTON
+========================================================= */
+
+.register-form .social-button {
+    width: 100%;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 1px solid var(--border);
+    border-radius: 0;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.register-form .social-button:hover {
+    background: var(--white);
+
+    border-color: #c9c2b7;
+}
+
+
+.register-form .social-button i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.register-form .login-link {
+    margin-top: 12px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: var(--muted);
+}
+
+
+.register-form .login-link a {
+    color: var(--black);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.register-form .login-link a:hover {
+    color: var(--gold-dark);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.register-footer {
+    width: 100%;
+    max-width: 580px;
+
+    margin: 13px auto 0;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    letter-spacing: 0.5px;
+
+    color: #aaa59c;
+}
+
+
+/* =========================================================
+   VALIDATION
+========================================================= */
+
+.form-error {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    color: #ad5555;
+}
+
+
+.input-error {
+    border-color: #ad5555 !important;
+}
+
+
+.input-success {
+    border-color: #63806a !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .register-page {
+        grid-template-columns: 45% 55%;
+    }
+
+    .register-heading {
+        padding: 38px 35px 40px;
+    }
+
+    .brand-content {
+        width: 88%;
+
+        transform: translateY(-55px);
+    }
+
+    .brand-content h1 {
+        font-size: 55px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .register-page {
+        display: block;
+    }
+
+
+    /* LEFT HERO */
+
+    .register-visual {
+        min-height: 300px;
+        height: 300px;
+    }
+
+
+    .register-visual .luxury-border {
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+
+    .brand-content {
+        width: 85%;
+
+        transform: translateY(0);
+    }
+
+
+    .brand-content .small-title {
+        font-size: 9px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .brand-content h1 {
+        font-size: 48px;
+    }
+
+
+    .brand-content .line {
+        margin: 19px auto;
+    }
+
+
+    .brand-content p {
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    /* RIGHT REGISTER */
+
+    .register-heading {
+        min-height: auto;
+
+        display: block;
+
+        padding: 38px 24px 45px;
+    }
+
+
+    .register-intro,
+    .register-form,
+    .register-footer {
+        max-width: 100%;
+    }
+
+
+    .register-intro h2 {
+        font-size: 38px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .register-visual {
+        min-height: 275px;
+        height: 275px;
+    }
+
+
+    .brand-content h1 {
+        font-size: 40px;
+    }
+
+
+    .brand-content p {
+        font-size: 10px;
+    }
+
+
+    .register-heading {
+        padding: 32px 20px 40px;
+    }
+
+
+    .register-intro h2 {
+        font-size: 33px;
+    }
+
+
+    .register-form .input-wrapper input {
+        height: 48px;
+    }
+
+
+    .register-form .register-button {
+        height: 48px;
+    }
+}

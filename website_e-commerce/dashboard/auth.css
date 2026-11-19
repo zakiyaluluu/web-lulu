@@ -1,0 +1,978 @@
+/* =========================================================
+   LV MAISON - AUTHENTICATION PAGE
+   Elegant | Luxury | Responsive
+   ========================================================= */
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f4ee;
+    color: #1d1d1d;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   MAIN AUTH PAGE
+   ========================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    background: #f7f4ee;
+}
+
+
+/* =========================================================
+   LEFT VISUAL SECTION
+   ========================================================= */
+
+.auth-visual {
+    position: relative;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22, 22, 22, 0.88),
+            rgba(50, 46, 39, 0.58)
+        ),
+        url("images/auth-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+/* Decorative luxury pattern */
+
+.auth-visual::before {
+    content: "";
+    position: absolute;
+    inset: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    pointer-events: none;
+}
+
+.auth-visual::after {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    bottom: -180px;
+
+    border: 1px solid rgba(194, 157, 89, 0.35);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 35px rgba(194, 157, 89, 0.04),
+        0 0 0 70px rgba(194, 157, 89, 0.03);
+
+    pointer-events: none;
+}
+
+
+/* Overlay */
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.58)
+        );
+}
+
+
+/* Content */
+
+.visual-content {
+    position: relative;
+    z-index: 2;
+
+    min-height: 100vh;
+
+    padding: 55px 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   BRAND
+   ========================= */
+
+.auth-brand,
+.mobile-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+
+    width: fit-content;
+}
+
+.auth-brand span,
+.mobile-brand span {
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.auth-brand small,
+.mobile-brand small {
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   VISUAL TEXT
+   ========================= */
+
+.visual-text {
+    max-width: 530px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.visual-text > span {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #d5b77a;
+}
+
+.visual-text h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 5vw, 76px);
+    font-weight: 500;
+
+    line-height: 1.05;
+    letter-spacing: -1px;
+
+    margin-bottom: 25px;
+}
+
+.visual-text h1 em {
+    font-style: italic;
+    font-weight: 500;
+
+    color: #d5b77a;
+}
+
+.visual-text p {
+    max-width: 460px;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================
+   VISUAL FOOTER
+   ========================= */
+
+.visual-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RIGHT FORM SECTION
+   ========================================================= */
+
+.auth-form-section {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 70px;
+
+    background: #f8f6f1;
+}
+
+
+/* Container */
+
+.auth-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+
+/* Mobile brand hidden desktop */
+
+.mobile-brand {
+    display: none;
+}
+
+
+/* =========================
+   FORM HEADING
+   ========================= */
+
+.form-heading {
+    margin-bottom: 38px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #a7864d;
+}
+
+.form-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(36px, 4vw, 48px);
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    color: #1c1c1b;
+}
+
+.form-heading h2 em {
+    font-style: italic;
+    color: #a7864d;
+}
+
+.form-heading p {
+    margin-top: 14px;
+
+    max-width: 410px;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: #77736c;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.auth-form {
+    width: 100%;
+}
+
+
+/* Input group */
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    color: #35332f;
+}
+
+
+/* Password label row */
+
+.label-row,
+.input-group > div[class="label-row"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Forgot password */
+
+.forgot {
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #a7864d;
+
+    transition: color 0.3s ease;
+}
+
+.forgot:hover {
+    color: #70582c;
+}
+
+
+/* =========================
+   INPUT WRAPPER
+   ========================= */
+
+.input-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper > i {
+    position: absolute;
+    left: 17px;
+
+    font-size: 13px;
+
+    color: #aaa298;
+
+    pointer-events: none;
+}
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 48px;
+
+    border: 1px solid #ddd8cf;
+    border-radius: 2px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    font-size: 13px;
+    color: #262421;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #aaa59d;
+}
+
+.input-wrapper input:focus {
+    border-color: #b99a61;
+
+    background: #fffefa;
+
+    box-shadow:
+        0 0 0 3px rgba(185, 154, 97, 0.08);
+}
+
+
+/* =========================
+   PASSWORD TOGGLE
+   ========================= */
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    color: #9a958d;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: #a7864d;
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   REMEMBER ME
+   ========================================================= */
+
+.remember {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 5px 0 25px;
+
+    width: fit-content;
+
+    font-size: 11px;
+    color: #77736c;
+
+    cursor: pointer;
+}
+
+.remember input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-check {
+    width: 17px;
+    height: 17px;
+
+    border: 1px solid #cfc8bd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.remember input:checked + .custom-check {
+    background: #a7864d;
+    border-color: #a7864d;
+}
+
+.remember input:checked + .custom-check::after {
+    content: "✓";
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SIGN IN BUTTON
+   ========================================================= */
+
+.auth-button {
+    position: relative;
+
+    width: 100%;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    border: 1px solid #1d1c1a;
+    border-radius: 2px;
+
+    background: #1d1c1a;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    overflow: hidden;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.auth-button i {
+    font-size: 11px;
+
+    transition: transform 0.3s ease;
+}
+
+.auth-button:hover {
+    background: #a7864d;
+    border-color: #a7864d;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(48, 42, 32, 0.13);
+}
+
+.auth-button:hover i {
+    transform: translateX(5px);
+}
+
+.auth-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.divider {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    margin: 28px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #ded9d0;
+}
+
+.divider span {
+    padding: 0 16px;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    color: #aaa49a;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   GOOGLE BUTTON
+   ========================================================= */
+
+.google-button {
+    width: 100%;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #ddd8cf;
+    border-radius: 2px;
+
+    background: #ffffff;
+
+    color: #403d38;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.google-button i {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-style: normal;
+}
+
+.google-button:hover {
+    border-color: #b8a27a;
+    background: #fcfaf6;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   AUTH SWITCH
+   ========================================================= */
+
+.auth-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    margin-top: 28px;
+
+    font-size: 11px;
+
+    color: #77736c;
+}
+
+.auth-switch a {
+    font-weight: 700;
+
+    color: #a7864d;
+
+    transition: color 0.3s ease;
+}
+
+.auth-switch a:hover {
+    color: #6f572d;
+}
+
+
+/* =========================================================
+   SECURE NOTE
+   ========================================================= */
+
+.secure-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e4dfd7;
+
+    font-size: 9px;
+    letter-spacing: 0.4px;
+
+    color: #a09a91;
+}
+
+.secure-note i {
+    font-size: 11px;
+
+    color: #a7864d;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .auth-page {
+        grid-template-columns: 43% 57%;
+    }
+
+    .visual-content {
+        padding: 45px;
+    }
+
+    .auth-form-section {
+        padding: 50px 45px;
+    }
+
+    .visual-text h1 {
+        font-size: 55px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-visual {
+        display: none;
+    }
+
+    .auth-form-section {
+        min-height: 100vh;
+
+        padding: 50px 30px;
+    }
+
+    .auth-container {
+        max-width: 500px;
+    }
+
+    .mobile-brand {
+        display: flex;
+
+        margin: 0 auto 55px;
+
+        color: #1d1c1a;
+    }
+
+    .mobile-brand span {
+        font-size: 34px;
+    }
+
+    .form-heading {
+        text-align: center;
+    }
+
+    .form-heading p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        background: #f8f6f1;
+    }
+
+    .auth-form-section {
+        padding: 35px 22px;
+    }
+
+    .auth-container {
+        max-width: 100%;
+    }
+
+    .mobile-brand {
+        margin-bottom: 40px;
+    }
+
+    .mobile-brand span {
+        font-size: 32px;
+    }
+
+    .mobile-brand small {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .form-heading {
+        margin-bottom: 30px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .form-heading h2 {
+        font-size: 36px;
+    }
+
+    .form-heading p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-wrapper input {
+        height: 52px;
+
+        font-size: 12px;
+    }
+
+    .auth-button {
+        height: 54px;
+    }
+
+    .google-button {
+        height: 52px;
+    }
+
+    .auth-switch {
+        flex-direction: column;
+        gap: 3px;
+
+        margin-top: 24px;
+    }
+
+    .secure-note {
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .auth-form-section {
+        padding: 30px 18px;
+    }
+
+    .mobile-brand {
+        margin-bottom: 32px;
+    }
+
+    .form-heading h2 {
+        font-size: 32px;
+    }
+
+    .form-heading p {
+        font-size: 11px;
+    }
+
+    .divider span {
+        padding: 0 10px;
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-container {
+    animation: fadeUp 0.7s ease both;
+}
+
+.visual-text {
+    animation: fadeUp 0.9s ease 0.15s both;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #a7864d;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

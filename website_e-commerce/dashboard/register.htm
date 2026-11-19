@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LV Maison | Register</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+
+<body>
+
+    <main class="register-page">
+
+
+        <!-- =================================================
+             LEFT SIDE - TAS / HERO
+        ================================================== -->
+
+        <section class="register-visual">
+
+            <!-- Overlay gelap -->
+            <div class="overlay"></div>
+
+            <!-- Border luxury -->
+            <div class="luxury-border"></div>
+
+
+            <!-- Brand Content -->
+
+            <div class="brand-content">
+
+                <span class="small-title">
+                    WELCOME TO
+                </span>
+
+                <h1>
+                    LV Maison
+                </h1>
+
+                <span class="line"></span>
+
+                <p>
+                    Discover timeless elegance, refined craftsmanship,
+                    and a world of exclusive luxury.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RIGHT SIDE - REGISTER
+        ================================================== -->
+
+        <section class="register-heading">
+
+
+            <!-- Introduction -->
+
+            <div class="register-intro">
+
+                <span class="small-title">
+                    CREATE YOUR ACCOUNT
+                </span>
+
+                <h2>
+                    Join LV Maison
+                </h2>
+
+                <p>
+                    Create your account and begin your exclusive
+                    journey with LV Maison.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 REGISTER FORM
+            ================================================== -->
+
+            <form
+                class="register-form"
+                id="registerForm"
+            >
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="fullname">
+                        Full Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="togglePassword"
+                            aria-label="Show password"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="toggleConfirmPassword"
+                            aria-label="Show confirm password"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMS -->
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                    >
+
+                    <label for="terms">
+
+                        I agree to the
+
+                        <a href="#">
+                            Terms &amp; Conditions
+                        </a>
+
+                        and
+
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- CREATE ACCOUNT -->
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+
+                    <span>
+                        CREATE ACCOUNT
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <!-- DIVIDER -->
+
+                <div class="divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+
+                <!-- GOOGLE -->
+
+                <button
+                    type="button"
+                    class="social-button"
+                    id="googleRegister"
+                >
+
+                    <i class="fa-brands fa-google"></i>
+
+                    <span>
+                        Continue with Google
+                    </span>
+
+                </button>
+
+
+
+                <!-- LOGIN -->
+
+                <p class="login-link">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Sign In
+                    </a>
+
+                </p>
+
+
+            </form>
+
+
+
+            <!-- FOOTER -->
+
+            <footer class="register-footer">
+
+                © 2026 LV Maison. All rights reserved.
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script2.js"></script>
+
+</body>
+
+</html>

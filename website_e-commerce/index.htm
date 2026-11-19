@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LV Maison | Luxury Collection</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                LV <span>Maison</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li>
+                    <a href="#home" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="#collection">Collection</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+
+                <!-- Cart -->
+                <button
+                    class="cart-button"
+                    id="cartButton"
+                    aria-label="Keranjang belanja"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="cart-count" id="cartCount">
+                        0
+                    </span>
+                </button>
+
+                <!-- Hamburger -->
+                <button
+                    class="hamburger"
+                    id="hamburger"
+                    aria-label="Menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-label">
+                        LUXURY COLLECTION
+                    </span>
+
+                    <h1>
+                        Elegance<br>
+                        <span>in Every Detail.</span>
+                    </h1>
+
+                    <p>
+                        Temukan koleksi fashion dan aksesori premium
+                        dengan sentuhan elegan yang timeless untuk
+                        melengkapi gaya Anda.
+                    </p>
+
+                    <a href="#products" class="btn">
+                        Explore Collection
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1000&q=85"
+                        alt="Luxury Fashion Collection"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COLLECTION / CATEGORY
+        ========================== -->
+        <section class="category-section" id="collection">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Our Collection
+                </h2>
+
+                <p>
+                    Pilih kategori favoritmu
+                </p>
+
+            </div>
+
+            <div class="category-buttons">
+
+                <button
+                    class="category-btn active"
+                    data-filter="all"
+                >
+                    All
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-filter="Fashion"
+                >
+                    Fashion
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-filter="Aksesoris"
+                >
+                    Aksesoris
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-filter="Beauty"
+                >
+                    Beauty
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUCTS
+        ========================== -->
+        <section class="product-section" id="products">
+
+            <div class="product-top">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        SIGNATURE PIECES
+                    </span>
+
+                    <h2>
+                        Best Collection
+                    </h2>
+
+                    <p>
+                        Pilihan terbaik untuk gaya eleganmu.
+                    </p>
+
+                </div>
+
+                <!-- Search -->
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Cari produk..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+
+
+                <!-- PRODUCT 1 -->
+                <article
+                    class="product-card"
+                    data-name="Louis Vuitton Classic Bag"
+                    data-category="Fashion"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=85"
+                            alt="Louis Vuitton Classic Bag"
+                        >
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Fashion
+                        </span>
+
+                        <h3>
+                            Louis Vuitton Classic Bag
+                        </h3>
+
+                        <p>
+                            Tas elegan dengan desain klasik
+                            yang cocok untuk berbagai kesempatan.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.9
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 28.500.000
+                                </span>
+
+                                <del>
+                                    Rp 31.000.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Louis Vuitton Classic Bag"
+                                data-price="28500000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+                <article
+                    class="product-card"
+                    data-name="Monogram Shoulder Bag"
+                    data-category="Fashion"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=85"
+                            alt="Monogram Shoulder Bag"
+                        >
+
+                        <span class="product-badge">
+                            BEST
+                        </span>
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Fashion
+                        </span>
+
+                        <h3>
+                            Monogram Shoulder Bag
+                        </h3>
+
+                        <p>
+                            Shoulder bag stylish dengan tampilan
+                            mewah dan modern.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.8
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 22.750.000
+                                </span>
+
+                                <del>
+                                    Rp 25.000.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Monogram Shoulder Bag"
+                                data-price="22750000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+                <article
+                    class="product-card"
+                    data-name="Luxury Leather Wallet"
+                    data-category="Aksesoris"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=85"
+                            alt="Luxury Leather Wallet"
+                        >
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Aksesoris
+                        </span>
+
+                        <h3>
+                            Luxury Leather Wallet
+                        </h3>
+
+                        <p>
+                            Dompet kulit premium dengan desain
+                            minimalis dan timeless.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.9
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 8.900.000
+                                </span>
+
+                                <del>
+                                    Rp 10.000.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Luxury Leather Wallet"
+                                data-price="8900000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+                <article
+                    class="product-card"
+                    data-name="Elegant Sunglasses"
+                    data-category="Aksesoris"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=85"
+                            alt="Elegant Sunglasses"
+                        >
+
+                        <span class="product-badge">
+                            HOT
+                        </span>
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Aksesoris
+                        </span>
+
+                        <h3>
+                            Elegant Sunglasses
+                        </h3>
+
+                        <p>
+                            Kacamata premium untuk memberikan
+                            sentuhan elegan pada penampilan.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.7
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 6.750.000
+                                </span>
+
+                                <del>
+                                    Rp 7.500.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Elegant Sunglasses"
+                                data-price="6750000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 5 -->
+                <article
+                    class="product-card"
+                    data-name="Silk Fashion Scarf"
+                    data-category="Fashion"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=800&q=85"
+                            alt="Silk Fashion Scarf"
+                        >
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Fashion
+                        </span>
+
+                        <h3>
+                            Silk Fashion Scarf
+                        </h3>
+
+                        <p>
+                            Scarf berbahan lembut dengan desain
+                            mewah yang cocok untuk outfit elegan.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.8
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 5.250.000
+                                </span>
+
+                                <del>
+                                    Rp 6.000.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Silk Fashion Scarf"
+                                data-price="5250000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 6 -->
+                <article
+                    class="product-card"
+                    data-name="Luxury Perfume"
+                    data-category="Beauty"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=85"
+                            alt="Luxury Perfume"
+                        >
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Beauty
+                        </span>
+
+                        <h3>
+                            Luxury Perfume
+                        </h3>
+
+                        <p>
+                            Parfum dengan aroma elegan yang
+                            memberikan kesan mewah sepanjang hari.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.9
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 4.850.000
+                                </span>
+
+                                <del>
+                                    Rp 5.500.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Luxury Perfume"
+                                data-price="4850000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 7 -->
+                <article
+                    class="product-card"
+                    data-name="Premium Bracelet"
+                    data-category="Aksesoris"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=85"
+                            alt="Premium Bracelet"
+                        >
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Aksesoris
+                        </span>
+
+                        <h3>
+                            Premium Bracelet
+                        </h3>
+
+                        <p>
+                            Gelang elegan dengan desain sederhana
+                            untuk melengkapi gaya sehari-hari.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.8
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 7.250.000
+                                </span>
+
+                                <del>
+                                    Rp 8.000.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Premium Bracelet"
+                                data-price="7250000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 8 -->
+                <article
+                    class="product-card"
+                    data-name="Luxury Makeup Set"
+                    data-category="Beauty"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85"
+                            alt="Luxury Makeup Set"
+                        >
+
+                        <span class="product-badge">
+                            BEST
+                        </span>
+
+                        <button
+                            class="wishlist"
+                            type="button"
+                            aria-label="Tambah ke wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Beauty
+                        </span>
+
+                        <h3>
+                            Luxury Makeup Set
+                        </h3>
+
+                        <p>
+                            Koleksi makeup dengan tampilan premium
+                            untuk menciptakan look yang elegan.
+                        </p>
+
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span>
+                                4.8
+                            </span>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div>
+                                <span class="price">
+                                    Rp 3.950.000
+                                </span>
+
+                                <del>
+                                    Rp 4.500.000
+                                </del>
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                type="button"
+                                data-product="Luxury Makeup Set"
+                                data-price="3950000"
+                                aria-label="Tambah ke keranjang"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- Empty Search -->
+            <div
+                class="empty-product"
+                id="emptyProduct"
+            >
+                <i class="fa-solid fa-box-open"></i>
+
+                <h3>
+                    Produk tidak ditemukan
+                </h3>
+
+                <p>
+                    Coba gunakan kata kunci atau kategori lainnya.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROMO
+        ========================== -->
+        <section class="promo-section">
+
+            <div class="promo-content">
+
+                <span>
+                    EXCLUSIVE COLLECTION
+                </span>
+
+                <h2>
+                    Luxury is a <strong>lifestyle.</strong>
+                </h2>
+
+                <p>
+                    Temukan item favoritmu dan lengkapi
+                    koleksi fashion dengan gaya yang timeless.
+                </p>
+
+                <a href="#products" class="btn promo-btn">
+                    Shop Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section class="contact-section" id="contact">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    Contact Us
+                </h2>
+
+                <p>
+                    Kami siap membantu kebutuhanmu.
+                </p>
+
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>
+                        Address
+                    </span>
+
+                    <strong>
+                        Jakarta, Indonesia
+                    </strong>
+
+                </div>
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong>
+                        +62 812 3456 7890
+                    </strong>
+
+                </div>
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+                        hello@lvmaison.com
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         CART PANEL
+    ========================== -->
+
+    <aside
+        class="cart-panel"
+        id="cartPanel"
+        aria-label="Keranjang belanja"
+    >
+
+        <div class="cart-header">
+
+            <h3>
+                Shopping Bag
+            </h3>
+
+            <button
+                id="closeCart"
+                type="button"
+                aria-label="Tutup keranjang"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        >
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    Rp 0
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-btn"
+                id="checkoutButton"
+                type="button"
+            >
+                Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Overlay -->
+    <div
+        class="overlay"
+        id="overlay"
+    ></div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="logo">
+                    LV <span>Maison</span>
+                </a>
+
+                <p>
+                    Luxury fashion collection dengan
+                    desain elegan dan timeless.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Navigation
+                </h4>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#collection">
+                    Collection
+                </a>
+
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Follow Us
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    TikTok
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 LV Maison. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

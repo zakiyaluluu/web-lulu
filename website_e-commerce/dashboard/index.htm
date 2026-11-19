@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LV Maison - Admin Dashboard</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    
+    <link rel="stylesheet" href="style.css">
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-top">
+
+                <!-- Brand -->
+                <a href="#dashboard" class="brand">
+                    <span class="brand-main">LV</span>
+                    <span class="brand-sub">Maison</span>
+                </a>
+
+                <!-- Close Sidebar -->
+                <button
+                    class="sidebar-close"
+                    id="sidebarClose"
+                    type="button"
+                    aria-label="Close menu"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- Admin Profile -->
+                <div class="admin-profile">
+
+                    <div class="profile-avatar">
+                        <span>AM</span>
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+
+                    <strong>Admin Maison</strong>
+                    <span>Administrator</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sidebar Navigation -->
+            <nav class="sidebar-nav">
+
+                <span class="nav-label">
+                    MAIN MENU
+                </span>
+
+                <a href="#dashboard" class="nav-link active">
+                    <i class="fa-solid fa-grid-2"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#products" class="nav-link">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Products</span>
+                </a>
+
+                <a href="#customers" class="nav-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Customers</span>
+                </a>
+
+
+                <span class="nav-label second">
+                    MANAGEMENT
+                </span>
+
+                <a href="#analytics" class="nav-link">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+
+                <a href="#messages" class="nav-link">
+                    <i class="fa-regular fa-message"></i>
+                    <span>Messages</span>
+                    <b class="nav-badge red">8</b>
+                </a>
+
+                <a href="#settings" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="sidebar-bottom">
+
+                <!-- Premium Card -->
+                <div class="upgrade-card">
+
+                    <div class="upgrade-icon">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+
+                    <strong>Maison Premium</strong>
+
+                    <p>
+                        Kelola produk kami dengan lebih mudah.
+                    </p>
+
+                    <button type="button">
+                        Upgrade
+                    </button>
+
+                </div>
+
+
+                <!-- Logout -->
+                <a href="#" class="logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Sidebar Overlay -->
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+        ></div>
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <main class="main-content">
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <!-- Mobile Menu -->
+                    <button
+                        class="menu-toggle"
+                        id="menuToggle"
+                        type="button"
+                        aria-label="Open menu"
+                    >
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="page-title">
+
+                        <span class="breadcrumb">
+                            Overview
+                        </span>
+
+                        <h1>
+                            Dashboard
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Topbar Right -->
+                <div class="topbar-right">
+
+                    <!-- Search -->
+                    <div class="search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            id="globalSearch"
+                            placeholder="Search anything..."
+                            aria-label="Search"
+                        >
+
+                        <span>
+                            ⌘ K
+                        </span>
+
+                    </div>
+
+
+                    <!-- Notification -->
+                    <button
+                        class="icon-button notification-button"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+
+
+                    <!-- Profile -->
+                    <div class="top-profile">
+
+                        <div class="top-avatar">
+                            AM
+                        </div>
+
+                        <div class="top-profile-info">
+                            <strong>
+                                Admin Maison
+                            </strong>
+
+                            <span>
+                                Super Admin
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+            ================================================== -->
+
+            <div class="content" id="dashboard">
+
+
+                <!-- =================================================
+                     WELCOME
+                ================================================== -->
+
+                <section class="welcome">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            OVERVIEW
+                        </span>
+
+                        <h2>
+                            Good morning,
+                            <em>Maison.</em>
+                        </h2>
+
+                        <p>
+                            Berikut ringkasan performa Maison hari ini.
+                        </p>
+
+                    </div>
+
+
+                    <div class="welcome-actions">
+
+                        <button
+                            class="outline-btn export-btn"
+                            type="button"
+                        >
+                            <i class="fa-solid fa-download"></i>
+                            Export
+                        </button>
+
+                        <button
+                            class="gold-btn add-product"
+                            type="button"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            Add Product
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     STATISTICS
+                ================================================== -->
+
+                <section class="stats-grid">
+
+                    <!-- Revenue -->
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon gold">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+
+                            <span class="stat-period">
+                                This Month
+                            </span>
+
+                        </div>
+
+                        <div class="stat-value">
+                            Rp 450,5 jt
+                        </div>
+
+                        <div class="stat-bottom">
+
+                            <span class="growth positive">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                20,6%
+                            </span>
+
+                            <span>
+                                vs last month
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Orders -->
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon black">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </div>
+
+                            <span class="stat-period">
+                                This Month
+                            </span>
+
+                        </div>
+
+                        <div class="stat-value">
+                            2,248
+                        </div>
+
+                        <div class="stat-bottom">
+
+                            <span class="growth positive">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                15,5%
+                            </span>
+
+                            <span>
+                                orders
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Customers -->
+                    <article
+                        class="stat-card"
+                        id="customers"
+                    >
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon beige">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <span class="stat-period">
+                                Total
+                            </span>
+
+                        </div>
+
+                        <div class="stat-value">
+                            9,800
+                        </div>
+
+                        <div class="stat-bottom">
+
+                            <span class="growth positive">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                9,2%
+                            </span>
+
+                            <span>
+                                customers
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Low Stock -->
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon rose">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+
+                            <span class="stat-period">
+                                Current
+                            </span>
+
+                        </div>
+
+                        <div class="stat-value">
+                            286
+                        </div>
+
+                        <div class="stat-bottom">
+
+                            <span class="growth negative">
+                                <i class="fa-solid fa-arrow-down"></i>
+                                9,9%
+                            </span>
+
+                            <span>
+                                low stock items
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+                <!-- =================================================
+                     ANALYTICS
+                ================================================== -->
+
+                <section
+                    class="analytics-grid"
+                    id="analytics"
+                >
+
+                    <!-- Sales Analytics -->
+                    <div class="panel sales-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    OVERVIEW
+                                </span>
+
+                                <h3>
+                                    Sales Analytics
+                                </h3>
+
+                            </div>
+
+                            <select id="chartPeriod">
+
+                                <option value="7">
+                                    Last 7 days
+                                </option>
+
+                                <option value="30">
+                                    Last 30 days
+                                </option>
+
+                                <option value="12">
+                                    Last 12 months
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="chart-summary">
+
+                            <strong>
+                                Rp 428.600.000
+                            </strong>
+
+                            <span class="growth positive">
+                                +18,6%
+                            </span>
+
+                        </div>
+
+
+                        <div class="chart-container">
+
+                            <canvas
+                                id="salesChart"
+                            ></canvas>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Order Status -->
+                    <div class="panel order-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    ORDERS
+                                </span>
+
+                                <h3>
+                                    Order Status
+                                </h3>
+
+                            </div>
+
+                            <button
+                                class="more-btn"
+                                type="button"
+                                aria-label="More options"
+                            >
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="order-chart">
+
+                            <div class="donut">
+
+                                <div class="donut-center">
+
+                                    <strong>
+                                        1,248
+                                    </strong>
+
+                                    <span>
+                                        Total
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="order-legend">
+
+                            <div>
+
+                                <span>
+                                    <i class="dot gold-dot"></i>
+                                    Completed
+                                </span>
+
+                                <strong>
+                                    98%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    <i class="dot black-dot"></i>
+                                    Processing
+                                </span>
+
+                                <strong>
+                                    19%
+                                </strong>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    <i class="dot gray-dot"></i>
+                                    Pending
+                                </span>
+
+                                <strong>
+                                    15%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     RECENT ORDERS + TOP PRODUCTS
+                ================================================== -->
+
+                <section class="lower-grid">
+
+                    <!-- Recent Orders -->
+                    <div
+                        class="panel recents-orders"
+                        id="orders"
+                    >
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    TRANSACTIONS
+                                </span>
+
+                                <h3>
+                                    Recent Orders
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="#orders"
+                                class="view-products"
+                            >
+                                VIEW ALL
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Order</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+
+                                    <!-- Order 1 -->
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                #LV-2841
+                                            </strong>
+                                        </td>
+
+                                        <td>
+
+                                            <div class="customer">
+
+                                                <span class="customer-avatar brown">
+                                                    AS
+                                                </span>
+
+                                                <span>
+                                                    Dania S.
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            Classic Bag
+                                        </td>
+
+                                        <td>
+                                            14 Oktober 2026
+                                        </td>
+
+                                        <td>
+                                            <strong>
+                                                Rp 28.5 jt
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            <span class="status completed">
+                                                Completed
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- Order 2 -->
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                #LV-2840
+                                            </strong>
+                                        </td>
+
+                                        <td>
+
+                                            <div class="customer">
+
+                                                <span class="customer-avatar black-avatar">
+                                                    RK
+                                                </span>
+
+                                                <span>
+                                                    Alichia J.
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            Shoulder Bag
+                                        </td>
+
+                                        <td>
+                                            14 Oktober 2026
+                                        </td>
+
+                                        <td>
+                                            <strong>
+                                                Rp 22.75 jt
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            <span class="status-processing">
+                                                Processing
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- Order 3 -->
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                #LV-2839
+                                            </strong>
+                                        </td>
+
+                                        <td>
+
+                                            <div class="customer">
+
+                                                <span class="customer-avatar pink-avatar">
+                                                    NC
+                                                </span>
+
+                                                <span>
+                                                    Liana R.
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            Luxury Perfume
+                                        </td>
+
+                                        <td>
+                                            14 Oktober 2026
+                                        </td>
+
+                                        <td>
+                                            <strong>
+                                                Rp 4.85 jt
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            <span class="status-pending">
+                                                Pending
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!-- Order 4 -->
+                                    <tr>
+
+                                        <td>
+                                            <strong>
+                                                #LV-2838
+                                            </strong>
+                                        </td>
+
+                                        <td>
+
+                                            <div class="customer">
+
+                                                <span class="customer-avatar beige-avatar">
+                                                    JM
+                                                </span>
+
+                                                <span>
+                                                    Jessica J.
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+                                        <td>
+                                            Premium Bracelet
+                                        </td>
+
+                                        <td>
+                                            13 Oktober 2026
+                                        </td>
+
+                                        <td>
+                                            <strong>
+                                                Rp 7.25 jt
+                                            </strong>
+                                        </td>
+
+                                        <td>
+                                            <span class="status completed">
+                                                Completed
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Top Products -->
+                    <div
+                        class="panel top-products"
+                        id="products"
+                    >
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="panel-label">
+                                    PERFORMANCE
+                                </span>
+
+                                <h3>
+                                    Top Products
+                                </h3>
+
+                            </div>
+
+                            <button
+                                class="more-btn"
+                                type="button"
+                                aria-label="More options"
+                            >
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="product-list">
+
+                            <div class="dashboard-list">
+
+                                <!-- Product 1 -->
+                                <div class="dashboard-product">
+
+                                    <div class="product-thumb">
+
+                                        <img
+                                            src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=200&q=80"
+                                            alt="Louis Vuitton Classic Bag"
+                                        >
+
+                                    </div>
+
+                                    <div class="product-info">
+
+                                        <strong>
+                                            Louis Vuitton Classic Bag
+                                        </strong>
+
+                                        <span>
+                                            1,000 sold
+                                        </span>
+
+                                    </div>
+
+                                    <strong class="product-sales">
+                                        Rp 5.18 M
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- Product 2 -->
+                                <div class="dashboard-product">
+
+                                    <div class="product-thumb">
+
+                                        <img
+                                            src="tas.jpg"
+                                            alt="Monogram Shoulder Bag"
+                                        >
+
+                                    </div>
+
+                                    <div class="product-info">
+
+                                        <strong>
+                                            Monogram Shoulder Bag
+                                        </strong>
+
+                                        <span>
+                                            1,250 sold
+                                        </span>
+
+                                    </div>
+
+                                    <strong class="product-sales">
+                                        Rp 3.36 M
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- Product 3 -->
+                                <div class="dashboard-product">
+
+                                    <div class="product-thumb">
+
+                                        <img
+                                            src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=200&q=80"
+                                            alt="Luxury Perfume"
+                                        >
+
+                                    </div>
+
+                                    <div class="product-info">
+
+                                        <strong>
+                                            Luxury Perfume
+                                        </strong>
+
+                                        <span>
+                                            1,550 sold
+                                        </span>
+
+                                    </div>
+
+                                    <strong class="product-sales">
+                                        Rp 611 jt
+                                    </strong>
+
+                                </div>
+
+
+                                <!-- Product 4 -->
+                                <div class="dashboard-product">
+
+                                    <div class="product-thumb">
+
+                                        <img
+                                            src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=200&q=80"
+                                            alt="Premium Bracelet"
+                                        >
+
+                                    </div>
+
+                                    <div class="product-info">
+
+                                        <strong>
+                                            Premium Bracelet
+                                        </strong>
+
+                                        <span>
+                                            94 sold
+                                        </span>
+
+                                    </div>
+
+                                    <strong class="product-sales">
+                                        Rp 681 jt
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="view-products"
+                                type="button"
+                            >
+                                View all products
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+
+                <section
+                    class="quick-section"
+                    id="messages"
+                >
+
+                    <div class="section-mini-heading">
+
+                        <div>
+
+                            <span class="panel-label">
+                                QUICK ACTIONS
+                            </span>
+
+                            <h3>
+                                Manage your store
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-grid">
+
+                        <!-- Add Product -->
+                        <button
+                            class="quick-card"
+                            type="button"
+                        >
+
+                            <div class="quick-icon gold">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Add Product
+                                </strong>
+
+                                <span>
+                                    Tambahkan produk baru
+                                </span>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </button>
+
+
+                        <!-- Inventory -->
+                        <button
+                            class="quick-card"
+                            type="button"
+                        >
+
+                            <div class="quick-icon black">
+                                <i class="fa-solid fa-box"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Manage Inventory
+                                </strong>
+
+                                <span>
+                                    Kelola stok produk
+                                </span>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </button>
+
+
+                        <!-- Customers -->
+                        <button
+                            class="quick-card"
+                            type="button"
+                        >
+
+                            <div class="quick-icon beige">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Customers
+                                </strong>
+
+                                <span>
+                                    Lihat database customer
+                                </span>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </button>
+
+
+                        <!-- Reports -->
+                        <button
+                            class="quick-card"
+                            type="button"
+                        >
+
+                            <div class="quick-icon rose">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    View Reports
+                                </strong>
+
+                                <span>
+                                    Analisis performa toko
+                                </span>
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     SETTINGS ANCHOR
+                ================================================== -->
+
+                <div
+                    id="settings"
+                    class="settings-anchor"
+                ></div>
+
+
+                <!-- =================================================
+                     FOOTER
+                ================================================== -->
+
+                <footer class="dashboard-footer">
+
+                    <span>
+                        © 2026 LV Maison
+                    </span>
+
+                    <span>
+                        Crafted with elegance.
+                    </span>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
